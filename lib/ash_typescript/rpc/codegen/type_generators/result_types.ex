@@ -195,7 +195,7 @@ defmodule AshTypescript.Rpc.Codegen.TypeGenerators.ResultTypes do
             #{metadata_type}
             export type Infer#{rpc_action_name_pascal}Result<
               Fields extends #{rpc_action_name_pascal}Fields | undefined,
-              MetadataFields extends ReadonlyArray<keyof #{rpc_action_name_pascal}Metadata> = []
+              _MetadataFields extends ReadonlyArray<keyof #{rpc_action_name_pascal}Metadata> = []
             > = InferResult<#{schema_ref}, Fields>;
             """
           else
